@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Uploadbtn from '../uploadbtn/uploadbtn'
 import './style.css'
 
@@ -10,9 +11,12 @@ function SideBar() {
              <h3 className="SideBarTitle">DashBoard</h3>
              <ul className="SideBarList">
                  <li className="SideBarListItem">
+                     <Link to="/" className="link">
                  <i class="fas fa-home"/>
-                     Home
+                     Home 
+                     </Link>
                  </li>
+                
                  <li className="SideBarListItem">
                  <i class="fas fa-users"/>
                      New ShipMent
@@ -54,12 +58,12 @@ function SideBar() {
                  <i class="fas fa-home"/>
                      Zones
                  </li>
-
+                <Link to="/users" className="link">
                  <li className="SideBarListItem">
                  <i class="fas fa-home"/>
                      Users
                  </li>
-
+                </Link>
                  <li className="SideBarListItem">
                  <i class="fas fa-home"/>
                      Tracks
