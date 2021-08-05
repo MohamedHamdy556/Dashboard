@@ -81,3 +81,109 @@ export const UserData = [
 
     
   ];
+  export const productData = [
+    {
+      name: "Jan",
+      "Sales": 4000,
+    },
+    {
+      name: "Feb",
+      "Sales": 3000,
+    },
+    {
+      name: "Mar",
+      "Sales": 5000,
+    },
+  ];
+  export const productRows = [
+    {
+      id: 1,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 13,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 2,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 16,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 3,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 18,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 4,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 19,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 5,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 15,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 6,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 146,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 7,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 12,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 8,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 17,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 9,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 13,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 10,
+      name: "Apple Airpods",
+      img:
+        "https://zaplox.com/wp-content/uploads/2018/06/two-mobiles.jpg-1.png",
+      stock: 14,
+      status: "active",
+      price: "$120.00",
+    },
+  ];

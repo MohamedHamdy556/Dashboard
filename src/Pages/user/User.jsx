@@ -1,5 +1,6 @@
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid } from '@material-ui/icons'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import'./User.css'
 
 function User() {
@@ -7,7 +8,9 @@ function User() {
         <div className="User">
             <div className="UserTitleContainer">
                 <h1 className="Title">Edit</h1>
+                <Link to="/newUser">
                 <button className="Createbtn">Create</button>
+                </Link>
             </div>
             <div className="UserContainer">
                 <div className="UserShow">

@@ -10,12 +10,13 @@ function SideBar() {
          <div className="SideBarMenu">
              <h3 className="SideBarTitle">DashBoard</h3>
              <ul className="SideBarList">
-                 <li className="SideBarListItem">
-                     <Link to="/" className="link">
+            <Link to="/" className="link">
+                        <li className="SideBarListItem">
                  <i class="fas fa-home"/>
                      Home 
-                     </Link>
+                     
                  </li>
+                 </Link>
                 
                  <li className="SideBarListItem">
                  <i class="fas fa-users"/>
@@ -28,8 +29,7 @@ function SideBar() {
              </ul>
              <br/>
              <br/>
-             <br/>
-             <br/>
+           
 
              <h3 className="SideBarTitle">Tracking</h3>
              <ul className="SideBarList">
@@ -40,15 +40,17 @@ function SideBar() {
              </ul>
              <br/>
              <br/>
-             <br/>
-             <br/>
+            
 
              <h3 className="SideBarTitle">Zone</h3>
-             <ul className="SideBarList">
+             <ul className="SideBarList">  
+             <Link to="/products" className="link">
                  <li className="SideBarListItem">
+                   
                  <i class="fas fa-home"/>
-                     WareHouse
+                     Products
                  </li>
+                 </Link>
                  <li className="SideBarListItem">
                  <i class="fas fa-home"/>
                      Drivers
