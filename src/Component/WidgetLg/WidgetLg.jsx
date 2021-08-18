@@ -51,23 +51,16 @@ export default function WidgetLg() {
     <div className="WidgetLg" >
       <h3 className="widgetLgTitle">Latest transactions</h3> 
      
-     
-      
       <DataGrid className="DG"
                 rows={data}
                 columns={columns} 
                 pageSize={10}
                 disableSelectionOnClick 
                 autoHeight
+                
                 components={{
                   Toolbar: MyExportButton,
-                  
                 }}
-               
-                autoHeight
-            
-         
-                           
                     />    
     </div>
   );

@@ -28,7 +28,7 @@ export default class BrandsModal extends Component {
             <section>
                
                 <input className="ModelOpen"  type="button" value="+ New Brand" onClick={() => this.openModal()} />
-                <Modal   visible={this.state.visible}  width="600"  height="900" effect="fadeInLeft" onClickAway={() => this.closeModal()}>
+                <Modal   visible={this.state.visible}  width="500"  height="500" effect="fadeInLeft" onClickAway={() => this.closeModal()}>
                     <div className="Modal">
                         <NewBrands/>
                         <button className="ModelClose" onClick={() => this.closeModal()}>Close</button>

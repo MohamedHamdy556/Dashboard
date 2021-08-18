@@ -61,12 +61,14 @@ export const UserData = [
   ];
   
   export const UserRows = [
-    { id: 1, UserName: 'ahmed', avatar: 'https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png', Email: 'ahmed@Gmail.com',status:'Active',Transaction:'$500' },
-    { id: 2, UserName: 'mohamed', avatar: 'https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png', Email: 'mohamed@Gmail.com',status:'Active',Transaction:'$500' },
-    { id: 3, UserName: 'Yasser', avatar: 'https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png', Email: 'yaser@Gmail.com',status:'Active',Transaction:'$500' },
-    { id: 4, UserName: 'Snow', avatar: 'https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png', Email: 'mohamed@Gmail.com',status:'Active',Transaction:'$500' },
-    { id: 5, UserName: 'Snow', avatar: 'https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png', Email: 'mohamed@Gmail.com',status:'Active',Transaction:'$500' },
-    { id: 6, UserName: 'Snow', avatar: 'https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png', Email: 'mohamed@Gmail.com',status:'Active',Transaction:'$500' },
+    { id: 1, UserName: 'ahmed', CreationDate:'20/8/2021',Roles:'Super Admin', Email: 'ahmed@Gmail.com' },
+    { id: 2, UserName: 'ahmed', CreationDate:'20/8/2021',Roles:'Super Admin', Email: 'ahmed@Gmail.com' },
+   
+    
+  ];
+  export const RoleRows = [
+    { id: 1, Name: 'Super man', CreationDate:'20/8/2021',Permission:1, OrderStatus: 0 },
+    { id: 2, Name: 'Super man', CreationDate:'20/8/2021',Permission:1, OrderStatus: 0 },
    
     
   ];

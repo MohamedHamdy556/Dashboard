@@ -2,11 +2,16 @@ import { DataGrid } from "@material-ui/data-grid";
 import { useState } from "react";
 import { BrandsRow } from '../../DummyData/DummyData';
 import BrandsModal from "./Modal";
+import DeleteIcon from '@material-ui/icons/Delete';
+import { Link } from 'react-router-dom';
+
 import './Style.css'
 
 const Brands = () => {
     const [data, setData] = useState(BrandsRow);
-
+    const handleClickDelete=(id)=>{
+      setData(data.filter((item)=>item.id !== id))
+  }
  
     const columns = [
   
@@ -29,7 +34,13 @@ const Brands = () => {
           renderCell: (params) => {
             return (
               <>
-                <i className="fas fa-pen"></i>
+
+               <Link to={"/EditBrand/"+params.row.id}>
+            <i className="fas fa-pen"/>
+
+            </Link>
+
+                <DeleteIcon className="BtnListDelete" onClick={()=>handleClickDelete(params.row.id)}/>        
               </>
             );
           },
@@ -49,8 +60,9 @@ const Brands = () => {
         rows={data}
         disableSelectionOnClick
         columns={columns}
-        pageSize={15}
+        pageSize={5}
         rowHeight={110}
+        autoHeight
      
          />
         </div>

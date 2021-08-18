@@ -1,6 +1,5 @@
 import './App.css';
 import NavBar from './Component/NavBar/Index';
-import SideBar from './Component/SideBar/Index';
 import Home from './Pages/Home/Home';
 import React from "react";
 import {
@@ -17,6 +16,10 @@ import NewUser from './Pages/newUser/NewUser';
 import Brands from './Pages/Brands/Brands';
 import Catregories from './Pages/Categorys/Catregories';
 import NewSideBar from './Component/NewSideBar/NewSideBar';
+import Role from './Pages/Role/Role';
+import EditRole from './Pages/Role/EditRole';
+import EditCategory from './Pages/Categorys/EditCategory';
+import EditBrand from './Pages/Brands/EditBrand';
 
 
 function App() {
@@ -34,7 +37,14 @@ function App() {
       <Route path="/users">
           <UserList/>
       </Route>
-      
+      <Route path="/Role">
+      <Role/>
+      </Route>
+      <Route path="/EditRole/:RoleId">
+      <EditRole/>
+      </Route>
+     
+    
       <Route path="/user/:userId">
           <User/>
       </Route>
@@ -53,8 +63,16 @@ function App() {
           <Route path="/Brands">
             <Brands />
           </Route>
+          <Route path="/EditBrand">
+            <EditBrand/>
+          </Route>
+
+         
           <Route path="/Catregories">
             <Catregories />
+          </Route>
+          <Route path="/EditCategory">
+            <EditCategory />
           </Route>
           
          </Switch>   

@@ -1,12 +1,19 @@
+import { Link } from 'react-router-dom';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 import { DataGrid } from "@material-ui/data-grid";
 import { useState } from "react";
 import { CategoryRow } from '../../DummyData/DummyData';
+import CategoryModal from "./Modal";
 import './Style.css'
 
 const Catregories = () => {
     const [data, setData] = useState(CategoryRow);
 
- 
+   
+      const handleClickDelete=(id)=>{
+          setData(data.filter((item)=>item.id !== id))
+      }
     const columns = [
   
         { field: "CName", headerName: "Category Name", width: 200},
@@ -21,9 +28,11 @@ const Catregories = () => {
           renderCell: (params) => {
             return (
               <>
-            
-            <i className="far fa-eye"></i>
-            
+            <Link to={"/EditCategory/"+params.row.id}>
+            <i className="fas fa-pen"/>
+
+            </Link>
+            <DeleteIcon className="BtnListDelete" onClick={()=>handleClickDelete(params.row.id)}/>        
          
               </>
             );
@@ -36,7 +45,7 @@ const Catregories = () => {
         <div className="BrandsbtnGroup">
             <div>
             </div>
-            <button className="BrandBtn">+ New Category</button>
+            <CategoryModal/>
         </div>
         <div className="BrandTable">
         <DataGrid
@@ -45,6 +54,7 @@ const Catregories = () => {
     disableSelectionOnClick
     columns={columns}
     pageSize={15}
+    autoHeight
      />
     </div>
     </div>
