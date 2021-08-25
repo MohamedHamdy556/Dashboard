@@ -2,7 +2,7 @@ import React from 'react'
 import './FeaturedInfo.css'
 import {stocker} from'../../DummyData/DummyData'
 
-function FeaturedInfo() {
+function CardsInfo() {
     return (
         <div className="featured">
              {stocker.map((data, key) => {
@@ -42,4 +42,4 @@ function FeaturedInfo() {
     )
 }
 
-export default FeaturedInfo
+export default CardsInfo

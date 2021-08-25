@@ -1,34 +1,105 @@
-import { Language, NotificationsNone, Settings } from '@material-ui/icons'
 import React from 'react'
+import { Container, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './style.css'
 
 function NavBar() {
     return (
-        <div className="NavBar">
-         <div className="NavBarWrapper">
-             <div className="Logoside">
-               <h2> <span className="deco">E</span>VA</h2>
-             </div>
-             
-             <div className="topRight">
-                 
-             <div className="topbarIconContainer">
-            <NotificationsNone />
-            <span className="topIconBadge">2</span>
-          </div>
-          <div className="topbarIconContainer">
-            <Language />
-            <span className="topIconBadge">2</span>
-          </div>
-          <div className="topbarIconContainer">
-            <Settings />
-          </div>
-          <img src="" alt="pic" className="topAvatar" />
-        
-             </div>
-         </div>
+      <Navbar bg="dark" expand="lg"  variant="dark"  className="fixed-top">
+      <Container>
+        <Navbar.Brand as={Link} to="/">EVA</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto" >
+            <Nav.Link  as={Link}  to="/">Home</Nav.Link>
           
-        </div>
+           
+            <div className="sidebar"> 
+            <NavDropdown title="DashBoard" id="basic-nav-dropdown">
+              <NavDropdown.Item> New Shipment</NavDropdown.Item>
+              <NavDropdown.Item >Parcels</NavDropdown.Item>
+              <NavDropdown.Item >Orders</NavDropdown.Item>
+              <NavDropdown.Item > Orders</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Track" id="basic-nav-dropdown">
+             
+              <NavDropdown.Item as={Link} to="./Tracking">Tracking</NavDropdown.Item>
+              <NavDropdown.Item  as={Link} to="./PickUp">Pick UP</NavDropdown.Item>
+              
+            </NavDropdown>
+            <NavDropdown title="Inventory" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/products">
+                
+                     Products   
+               
+        </NavDropdown.Item>
+              <NavDropdown.Item  as={Link}  to="/Brands">  
+             
+              Brands   
+                
+                </NavDropdown.Item>
+              <NavDropdown.Item  as={Link}  to="/Brands"> 
+                
+              Catregories   
+             
+                </NavDropdown.Item>
+            
+            </NavDropdown>
+            <NavDropdown title="Admin" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/Role"> 
+                 
+                 Role   
+                
+                 </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/Users">
+               
+                Users   
+                </NavDropdown.Item>
+              <NavDropdown.Item>  
+              
+              Reports   
+             
+                </NavDropdown.Item>
+           
+            
+            </NavDropdown>
+            <NavDropdown title="Zones" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/products"> 
+                
+              Branches   
+            
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/products"> 
+              
+                Cities   
+             
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/products"> 
+                   
+                   City assembly   
+               
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/products"> 
+             
+                Warehouses
+              
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/products"> 
+              
+                Drivers
+              
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/products"> 
+                
+                Shipping  
+             
+                </NavDropdown.Item>
+            </NavDropdown>
+            </div>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>   
     )
 }
 

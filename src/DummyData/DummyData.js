@@ -198,6 +198,40 @@ export const UserData = [
       featuredMoney:'4000'
     },
   ]
+  export const pickup=[
+    {
+      id:1,
+      PickUpId:1,
+      PickUpLocation:'cairo-egypt',
+      ScheduledDate:'25-8-2021',
+      PickUpType:'activate',
+      Status:'created'
+    },
+    {
+      id:2,
+      PickUpId:1,
+      PickUpLocation:'cairo-egypt',
+      ScheduledDate:'25-8-2021',
+      PickUpType:'activate',
+      Status:'created'
+    },
+    {
+      id:3,
+      PickUpId:1,
+      PickUpLocation:'cairo-egypt',
+      ScheduledDate:'25-8-2021',
+      PickUpType:'activate',
+      Status:'created'
+    },
+    {
+      id:4,
+      PickUpId:1,
+      PickUpLocation:'cairo-egypt',
+      ScheduledDate:'25-8-2021',
+      PickUpType:'activate',
+      Status:'created'
+    }
+  ]
   export const Tamount=[
     {
       id:1,

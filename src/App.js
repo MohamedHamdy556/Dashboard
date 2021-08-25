@@ -20,16 +20,20 @@ import Role from './Pages/Role/Role';
 import EditRole from './Pages/Role/EditRole';
 import EditCategory from './Pages/Categorys/EditCategory';
 import EditBrand from './Pages/Brands/EditBrand';
+import { Container } from 'react-bootstrap';
+import Tracking from './Pages/Tracking/Tracking';
+import TrackingEdit from './Pages/Tracking/TrackingEdit';
+import PickUp from './Pages/PickUp/PickUp';
+import EditPickUp from './Pages/PickUp/EditPickUp';
 
 
 function App() {
   return (
      <Router>
-       <div className="App">
-      <NavBar/>
-      <div className="container">
+      <NavBar/>  
+        <NewSideBar/>
+      <Container style={{marginTop:30}}>
      
-      <NewSideBar/>
           <Switch>
       <Route exact path="/">
           <Home/>
@@ -74,11 +78,25 @@ function App() {
           <Route path="/EditCategory">
             <EditCategory />
           </Route>
+          <Route path="/Tracking">
+            <Tracking />
+          </Route>
+          <Route path="/TrackingEdit/:TrackingId">
+          <TrackingEdit/>  
+      </Route>
+      <Route path="/PickUp">
+            <PickUp />
+          </Route>
+          <Route path="/EditPickUp/:EditPickUpId">
+          <EditPickUp/>  
+      </Route>
+          
+          
           
          </Switch>   
 
-      </div>
-    </div>
+      </Container>
+   
     </Router>
   );
 }

@@ -1,63 +1,17 @@
-.NavBar{
-    background-color: black;
-    height: 50px;
-    color: white;
-    width: 100%;
- 
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-.NavBarWrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
-    
-}
-.fas{
-    margin-right: 5px;
-    
-}
-.deco{
-    color: rgb(214, 24, 24);
-}
+.sidebar{
+    display: none;
 
-.Logoside{
-    font-size: 30;
 }
-.topRight{
-    display: flex;
-    align-items: center;
+.evalogo{
+   text-decoration: none;
+   font-size: larger;
 }
-.topbarIconContainer {
-    position: relative;
-    cursor: pointer;
-    margin-right: 10px;
-    color: white;
+@media screen and (max-width: 992px) {
+    .sidebar {
+    display: block;
+      
+       
+       
+      
   }
-  
-  .topIconBadge{
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      top: -5px;
-      right: 0px;
-      background-color: red;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
   }
-  
-  .topAvatar{
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-  }
-  
-  

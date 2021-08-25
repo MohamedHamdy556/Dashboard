@@ -1,30 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
    import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import { Link } from 'react-router-dom';
 import './Style.css'
 const NewSideBar = () => {
     
-   
+    const [collapsed, setcollapsed] = useState('')
+  
     
     return (
         <div className="NewSideBarBar">
-        <ProSidebar className="ProSide">
+        <ProSidebar className="ProSide" collapsed={collapsed} >
        
-         <Menu > 
-             <MenuItem> 
+         <Menu >
+
+             <MenuItem className="SideBarMainIcon" onClick={()=>setcollapsed(!collapsed)} icon={<i class="fas fa-bars"/>}></MenuItem>
+             <MenuItem icon={   <i className="fas fa-home"/>}> 
       <Link
        to="/"
        className="link">
                  <li className="SideBarListItem">
+               
                      Home
                  </li>
         </Link>    
         </MenuItem>
+
     <MenuItem > 
     <Link to="/" className="link"></Link>
     </MenuItem>
-    <SubMenu icon={<i className="fas fa-home"/>} title="DashBoard" >
+    <SubMenu icon={ <i class="fas fa-tachometer-alt"/>} title="DashBoard" >
       <MenuItem> 
                  <li className="SideBarListItem">
                      New Shipment
@@ -52,14 +57,19 @@ const NewSideBar = () => {
     <br/>
     <SubMenu icon={<i class="fas fa-truck-loading"/>} title="Track" >
       <MenuItem> 
+      <Link to="/Tracking" className="link">
                  <li className="SideBarListItem">
                  Tracking
                  </li>
+                 </Link>
         </MenuItem>
         <MenuItem> 
+        <Link to="/PickUp" className="link">
+        
                  <li className="SideBarListItem">
                      Pick UP
                  </li>
+                 </Link>
         </MenuItem>
        
      
@@ -113,7 +123,7 @@ const NewSideBar = () => {
                  </li>
              </Link>
         </MenuItem>
-        <MenuItem> 
+        <MenuItem icon={<i class="far fa-flag"/>}> 
                  <li className="SideBarListItem">
                      Reports
                  </li>
@@ -146,10 +156,11 @@ const NewSideBar = () => {
         </MenuItem>
        
     </SubMenu>
-    <MenuItem> 
-  
-                   Reports
-                   </MenuItem>
+    <MenuItem icon={<i class="far fa-flag"/>}> 
+                 <li className="SideBarListItem">
+                     Reports
+                 </li>
+        </MenuItem>
     
   </Menu>
   

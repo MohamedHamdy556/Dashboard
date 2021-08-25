@@ -2,8 +2,13 @@
   margin: 0;
   padding: 0;
   
+  
 }
-.container{
-  display: flex;
+
+.con{
+ 
+ display: flex;
+ margin-top: 50px !important;
+ justify-content: space-between;
 }
 
