@@ -1,44 +1,51 @@
 import React from 'react'
-import './FeaturedInfo.css'
 import {stocker} from'../../DummyData/DummyData'
+import { Featured,
+         FeaturedItem,
+         FeaturedMoney,
+         FeaturedMoneyContainer,
+         FeaturedMoneyRate,
+         FeaturedSub,
+         FeaturedTitle,
+         Green, Red } from './FeaturedInfoStyle';
 
 function CardsInfo() {
     return (
-        <div className="featured">
+        <Featured>
              {stocker.map((data, key) => {
           return ( 
-          <div className="featuredItem">
+          <FeaturedItem>
               <div key={key}>
            
-                <span className="featuredTitle">{data.featuredTitle}</span>
-                <div className="featuredMoneyContainer">
-                    <span className="featuredMoney">${data.featuredMoney}</span>
-                    <span className="featuredMoneyRate">
+                <FeaturedTitle>{data.featuredTitle}</FeaturedTitle>
+                <FeaturedMoneyContainer>
+                    <FeaturedMoney>${data.featuredMoney}</FeaturedMoney>
+                    <FeaturedMoneyRate>
                    
                     {data.back <0 ?(
-                        <p className="coin-precent red">
+                        <Red>
                             {data.back}%  
                             <i className="fas fa-long-arrow-alt-down"/>
-                        </p>
+                        </Red>
                       
                     ):(
-                        <p className="coin-precent green">
+                        <Green>
                             {data.back}%
                             <i className="fas fa-long-arrow-alt-up"/>
-                        </p>
+                        </Green>
                     )}    
-                </span> 
-                </div>
+                </FeaturedMoneyRate> 
+                </FeaturedMoneyContainer>
                 
-                <span className="featuredSub">Compared To Last Month</span>
+                <FeaturedSub>Compared To Last Month</FeaturedSub>
                 
                 </div>
-             </div> 
+             </FeaturedItem> 
             );
                 })} 
            
             
-        </div>
+        </Featured>
     )
 }
 

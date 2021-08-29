@@ -1,0 +1,22 @@
+.Filters{
+   
+    align-items: center;
+    display: flex;
+  
+    justify-content: center;
+}
+.btnFilter{
+    margin: 10px 10px;
+    padding: 5px;
+    border: brown 1px solid;
+    background: none;
+    color: brown;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btnFilter:hover{
+    
+    background: brown;
+    color: white;
+    transition: .24s;
+}

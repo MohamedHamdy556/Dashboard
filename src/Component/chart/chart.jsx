@@ -1,14 +1,14 @@
 import React from 'react'
-import './chart.css'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { ChartMain, ChartsTitle } from './chartStyle';
 
 
 
 function Chart({dataKey,data,title,grid}) {
     
     return (
-        <div className='chart'>
-          <h3 className="chartsTitle">{title}</h3>
+        <ChartMain>
+          <ChartsTitle>{title}</ChartsTitle>
           <ResponsiveContainer width="100%" aspect={4/1}>
         <LineChart
          
@@ -31,7 +31,7 @@ function Chart({dataKey,data,title,grid}) {
         
       </ResponsiveContainer>
       
-        </div>
+        </ChartMain>
     )
 }
 

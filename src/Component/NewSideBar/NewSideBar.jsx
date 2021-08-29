@@ -2,20 +2,21 @@ import React, { useState } from 'react'
    import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import { Link } from 'react-router-dom';
-import './Style.css'
+import './Style.js'
+import { NewSideBarBar } from './Style.js';
 const NewSideBar = () => {
     
     const [collapsed, setcollapsed] = useState('')
   
     
     return (
-        <div className="NewSideBarBar">
-        <ProSidebar className="ProSide" collapsed={collapsed} >
+        <NewSideBarBar>
+        <ProSidebar className="ProSide" collapsed={collapsed}  width={200}>
        
          <Menu >
 
-             <MenuItem className="SideBarMainIcon" onClick={()=>setcollapsed(!collapsed)} icon={<i class="fas fa-bars"/>}></MenuItem>
-             <MenuItem icon={   <i className="fas fa-home"/>}> 
+             <MenuItem style={{marginTop:10}} onClick={()=>setcollapsed(!collapsed)} icon={<i class="fas fa-bars"/>}></MenuItem>
+             <MenuItem icon={<i className="fas fa-home"/>}> 
       <Link
        to="/"
        className="link">
@@ -165,7 +166,7 @@ const NewSideBar = () => {
   </Menu>
   
 </ProSidebar>
-        </div>
+        </NewSideBarBar>
     )
 }
 

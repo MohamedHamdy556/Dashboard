@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import './style.css'
+import { Sidebar } from './style.js'
 
 function NavBar() {
     return (
@@ -14,7 +14,7 @@ function NavBar() {
             <Nav.Link  as={Link}  to="/">Home</Nav.Link>
           
            
-            <div className="sidebar"> 
+            <Sidebar> 
             <NavDropdown title="DashBoard" id="basic-nav-dropdown">
               <NavDropdown.Item> New Shipment</NavDropdown.Item>
               <NavDropdown.Item >Parcels</NavDropdown.Item>
@@ -95,7 +95,7 @@ function NavBar() {
              
                 </NavDropdown.Item>
             </NavDropdown>
-            </div>
+            </Sidebar>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -30,9 +30,10 @@ import EditPickUp from './Pages/PickUp/EditPickUp';
 function App() {
   return (
      <Router>
-      <NavBar/>  
+      <NavBar/> 
+   
         <NewSideBar/>
-      <Container style={{marginTop:30}}>
+      <Container fluid style={{marginTop:50,height:'100%',width:'98%',marginRight:'-15px'}}>
      
           <Switch>
       <Route exact path="/">
@@ -94,10 +95,12 @@ function App() {
           
           
          </Switch>   
-
+ 
       </Container>
-   
+     
+  <button className="MainButton">click</button>
     </Router>
+
   );
 }
 

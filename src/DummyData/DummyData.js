@@ -178,6 +178,48 @@ export const UserData = [
       price: "$120.00",
     },
   ];
+  export const TrackingData=[
+    {
+      id:1,
+      TrackingCode:'Q2345',
+      TrackingFrom:'10st Giza',
+      TrackingDate:'23/5 - 25/5',
+      TrackingName:'Ahmed Al Syed',
+      COD:'145 EGP',
+      Type:'Deliverd',
+      status:'Pendig'
+    },
+    {
+      id:2,
+      TrackingCode:'Q2345',
+      TrackingFrom:'10st Giza',
+      TrackingDate:'23/5 - 25/5',
+      TrackingName:'Ahmed Al Syed',
+      COD:'145 EGP',
+      Type:'Deliverd',
+      status:'Pendig'
+    },
+    {
+      id:3,
+      TrackingCode:'Q2345',
+      TrackingFrom:'10st Giza',
+      TrackingDate:'23/5 - 25/5',
+      TrackingName:'Ahmed Al Syed',
+      COD:'145 EGP',
+      Type:'Deliverd',
+      status:'Pendig'
+    },
+    {
+      id:4,
+      TrackingCode:'Q2345',
+      TrackingFrom:'10st Giza',
+      TrackingDate:'23/5 - 25/5',
+      TrackingName:'Ahmed Al Syed',
+      COD:'145 EGP',
+      Type:'Deliverd',
+      status:'Pendig'
+    }
+  ]
   export const stocker=[
     {
       id:1,
@@ -193,6 +235,24 @@ export const UserData = [
     },
     {
       id:3,
+      back:4.3,
+      featuredTitle:'Total',
+      featuredMoney:'4000'
+    },
+    {
+      id:4,
+      back:4.3,
+      featuredTitle:'Total',
+      featuredMoney:'4000'
+    },
+    {
+      id:5,
+      back:4.3,
+      featuredTitle:'Total',
+      featuredMoney:'4000'
+    },
+    {
+      id:6,
       back:4.3,
       featuredTitle:'Total',
       featuredMoney:'4000'
