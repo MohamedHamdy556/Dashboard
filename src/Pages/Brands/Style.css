@@ -1,16 +1,25 @@
 .Brands{
-    flex: 6.5;
-    margin: 20px;
-    padding: 20px;
- 
-  
+   padding-top: 10px;
+}
+.image >img{
+    height:50px;
+    width: 70px;
+}
+.tabletext{
    
+    font-weight: 600;
+  
+}
+
+.icon{
+    margin-right:  20px;
 }
 .BrandTable{
      box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
     border-radius: 10px;
+   overflow-x: scroll;
    
 }
 .BrandsbtnGroup{
@@ -33,10 +42,5 @@
     display: flex;
    
 }
-.BrandListImg{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-}
+
+

@@ -1,44 +1,29 @@
-import { Link } from 'react-router-dom';
-import DeleteIcon from '@material-ui/icons/Delete';
 
-import { DataGrid } from "@material-ui/data-grid";
-import { useState } from "react";
-import { CategoryRow } from '../../DummyData/DummyData';
+import { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
 import CategoryModal from "./Modal";
 import './Style.css'
 
 const Catregories = () => {
-    const [data, setData] = useState(CategoryRow);
-
+    const [data, setData] = useState([]);
+    useEffect(() => {
+      getData()
+    }, [])
    
-      const handleClickDelete=(id)=>{
-          setData(data.filter((item)=>item.id !== id))
-      }
-    const columns = [
-  
-        { field: "CName", headerName: "Category Name", width: 200},
-        { field: "Order", headerName: "Order", width: 200 },
-        { field: "SubCategories", headerName: "SubCategories", width: 200 },
-        { field: "CDate", headerName: "Creation Date", width: 200 },
-        { field: "Creator", headerName: "Creator",width:250},
-        {
-          field: "action",
-          headerName: "Action",
-          width: 150,
-          renderCell: (params) => {
-            return (
-              <>
-            <Link to={"/EditCategory/"+params.row.id}>
-            <i className="fas fa-pen"/>
-
-            </Link>
-            <DeleteIcon className="BtnListDelete" onClick={()=>handleClickDelete(params.row.id)}/>        
-         
-              </>
-            );
-          },
-        },
-      ];
+     async function deleteOperation(id) {
+      let result=await fetch("http://127.0.0.1:8000/api/categorydelete/"+id,{
+        method:"DELETE" 
+      });
+      result=await result.json();
+      getData();
+     }
+     async function getData() {
+      let result=await fetch("http://127.0.0.1:8000/api/catelist")
+      result=await result.json();
+      setData(result)
+      
+       
+     }
     
     return (
         <div className="Brands">
@@ -48,14 +33,40 @@ const Catregories = () => {
             <CategoryModal/>
         </div>
         <div className="BrandTable">
-        <DataGrid
-        
-    rows={data}
-    disableSelectionOnClick
-    columns={columns}
-    pageSize={15}
-    autoHeight
-     />
+        <Table  bordered>
+  <thead>
+    <tr>
+      <th style={{width:200}}>Category Name</th>
+      <th>Order</th>
+      <th style={{width:200}}>SubCategories </th>
+      <th>Creation Date</th>
+      <th>Creator</th>
+
+      <th style={{width:200}}>Action</th>
+    </tr>
+  </thead>
+ 
+
+  
+  <tbody>
+     {
+     data.map((item)=>
+    <tr>
+      
+      <td className="tabletext">{item.category_name}</td>
+      <td className="tabletext">{item.orders}</td> 
+      <td className="tabletext">{item.subcategory}</td>
+      <td className="tabletext">{item.creaton_date}</td>
+      <td className="tabletext">{item.Creator}</td>
+     
+   
+      <td className="tableicons">
+        <i onClick={()=>deleteOperation(item.id)} style={{cursor:"pointer",color:'brown'}} class="icon fas fa-trash"/><i class="icon far fa-edit"/></td>
+    </tr>
+     )}
+  </tbody>
+ 
+</Table>
     </div>
     </div>
     )

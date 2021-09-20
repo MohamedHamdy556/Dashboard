@@ -1,18 +1,24 @@
 .Filters{
-   
+    margin: 10px;
     align-items: center;
     display: flex;
-  
     justify-content: center;
+
 }
 .btnFilter{
-    margin: 10px 10px;
-    padding: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 5px;
+    padding: 7px;
     border: brown 1px solid;
     background: none;
     color: brown;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
+    width: 150px;
+    height: 30px;
 }
 .btnFilter:hover{
     
@@ -20,3 +26,9 @@
     color: white;
     transition: .24s;
 }
+@media screen and (max-width: 992px) {
+    .Filters {
+     display: grid;
+     grid-template-columns: auto auto ;
+    }
+  }

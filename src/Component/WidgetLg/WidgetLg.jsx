@@ -26,26 +26,26 @@ export default function WidgetLg() {
   };
   const columns = [
     
-    { field: 'productname', headerName: 'productname ', width: 200 },
-    { field: 'amount', UserName: 'amount ', width: 130 },
-    { field: 'price', headerName: 'price ', width: 130 },
-    { field: 'Totla', headerName: 'Totla ', width: 150 },
-    { field: 'precent', headerName: 'precent ', width: 130 },
-{ field: 'btntype', headerName: 'status', width: 120 ,renderCell:(params)=>{
+    { field: 'productname', headerName: 'productname ', width:200, headerClassName: 'super-app-theme--header', cellClassName: 'super-app-theme--cell',  headerAlign: 'center',},
+    { field: 'amount', UserName: 'amount ', width: 200 , headerClassName: 'super-app-theme--header', cellClassName: 'super-app-theme--cell'  ,headerAlign: 'center',},
+    { field: 'price', headerName: 'price ', width: 200 , headerClassName: 'super-app-theme--header', cellClassName: 'super-app-theme--cell',headerAlign: 'center',},
+    { field: 'Totla', headerName: 'Totla ', width: 200 , headerClassName: 'super-app-theme--header', cellClassName: 'super-app-theme--cell',headerAlign: 'center',},
+    { field: 'precent', headerName: 'precent ', width: 200 , headerClassName: 'super-app-theme--header', cellClassName: 'super-app-theme--cell',headerAlign: 'center',},
+{ field: 'btntype', headerName: 'status', width: 200 ,renderCell:(params)=>{
         return(
                <>
                   <Button  type={params.row.btntype}/>
                </>  
                 )  
-    }
+    }, headerClassName: 'super-app-theme--header'
     },
-     { field: 'status', headerName: 'Delete ', width: 120,renderCell:(params)=>{
+     { field: 'status', headerName: 'Delete ', width: 220,renderCell:(params)=>{
         return(
             <>
                 <DeleteIcon className="BtnListDelete" onClick={()=>handleClickDelete(params.row.id)}/>          
             </>    
         )
-    } }
+    }, headerClassName: 'super-app-theme--header' }
   ]  
   return (
     <div className="WidgetLg" >
@@ -57,9 +57,11 @@ export default function WidgetLg() {
                 pageSize={10}
                 disableSelectionOnClick 
                 autoHeight
+                checkboxSelection
                 
                 components={{
                   Toolbar: MyExportButton,
+                  
                 }}
                     />    
     </div>

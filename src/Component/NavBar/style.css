@@ -1,17 +1,30 @@
-.sidebar{
-    display: none;
+.NavBar{
+    background-color: black;
+    height: 50px;
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.NavBarWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+.fas{
+    margin-right: 5px;
+    
+}
+.deco{
+    color: rgb(214, 24, 24);
+}
 
+.Logoside{
+    font-size: 30;
 }
-.evalogo{
-   text-decoration: none;
-   font-size: larger;
-}
-@media screen and (max-width: 992px) {
-    .sidebar {
-    display: block;
-      
-       
-       
-      
-  }
-  }
+
+  
+  

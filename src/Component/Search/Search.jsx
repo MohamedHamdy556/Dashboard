@@ -3,8 +3,8 @@ import './Style.css'
 const Search = () => {
     return (
         <div className="Search"> 
-        <button className="SearchBtn" type="submit">Search </button>
-            <input className="inputSearch" type="search"/>
+     
+            <input className="inputSearch" type="search" placeholder="Search"/>
         </div>
     )
 }

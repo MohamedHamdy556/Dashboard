@@ -1,4 +1,3 @@
-import { Button } from 'bootstrap'
 import React from 'react'
 import './Stylce.css'
 const Filters = () => {

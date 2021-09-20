@@ -5,7 +5,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link
 } from "react-router-dom";
 import UserList from './Pages/userList/UserList';
 import User from './Pages/user/User';
@@ -25,20 +26,33 @@ import Tracking from './Pages/Tracking/Tracking';
 import TrackingEdit from './Pages/Tracking/TrackingEdit';
 import PickUp from './Pages/PickUp/PickUp';
 import EditPickUp from './Pages/PickUp/EditPickUp';
+import Login from './Pages/Login/Login';
+import NewShipment from './Pages/NewShipment/NewShipment';
 
 
 function App() {
   return (
+
      <Router>
+       
+ 
       <NavBar/> 
    
-        <NewSideBar/>
-      <Container fluid style={{marginTop:50,height:'100%',width:'98%',marginRight:'-15px'}}>
+        <NewSideBar/> 
+        
+      <Container fluid style={{marginTop:50,height:'100%'}}>
      
           <Switch>
+
+            
       <Route exact path="/">
           <Home/>
       </Route>
+ 
+<Route path="/login" >
+          <Login/>
+         
+      </Route> 
       <Route path="/users">
           <UserList/>
       </Route>
@@ -50,7 +64,7 @@ function App() {
       </Route>
      
     
-      <Route path="/user/:userId">
+      <Route path="/user/:id">
           <User/>
       </Route>
       <Route path="/newUser">
@@ -91,14 +105,24 @@ function App() {
           <Route path="/EditPickUp/:EditPickUpId">
           <EditPickUp/>  
       </Route>
+      <Route path="/NewShipment">
+            <NewShipment />
+          </Route>
+
           
           
           
          </Switch>   
  
       </Container>
-     
-  <button className="MainButton">click</button>
+      <div class="dropdownbtn">
+  <button className="MainButton">CSV</button>
+  <div class="dropdown-content">
+    <a href="#">Export</a>
+    <a href="#">Import</a>
+    <a href="#">Download</a>
+  </div>
+  </div>
     </Router>
 
   );

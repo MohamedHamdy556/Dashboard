@@ -1,51 +1,31 @@
-import { DataGrid } from "@material-ui/data-grid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrandsRow } from '../../DummyData/DummyData';
 import BrandsModal from "./Modal";
-import DeleteIcon from '@material-ui/icons/Delete';
-import { Link } from 'react-router-dom';
 
 import './Style.css'
+import { Table } from "react-bootstrap";
 
 const Brands = () => {
-    const [data, setData] = useState(BrandsRow);
-    const handleClickDelete=(id)=>{
-      setData(data.filter((item)=>item.id !== id))
-  }
- 
-    const columns = [
-  
-        { field: "image", headerName: "Image", width: 200,renderCell:(params)=>{  
-            return(    
-                <div className="BrandListImg">
-                    <img className="BrandListImg" src={params.row.image} alt="" /> 
-                </div>     
-            )
+    const [data, setData] = useState([]);
+    useEffect(() => {
+     getData()
+      
+    }, [])
+    async function deleteOperation(id) {
+      let result=await fetch("http://127.0.0.1:8000/api/brandsdelete/"+id,{
+        method:"DELETE" 
+      });
+      result=await result.json();
+      getData();
+     }
+     async function getData() {
+      let result=await fetch("http://127.0.0.1:8000/api/list")
+      result=await result.json();
+      setData(result)
+      
        
-        }},
-        { field: "Name", headerName: "Name", width: 200 },
-        { field: "NameAr", headerName: "Name Ar",width:250},
-        
-        {
-         
-          field: "action",
-          headerName: "Action",
-          width: 150,
-          renderCell: (params) => {
-            return (
-              <>
-
-               <Link to={"/EditBrand/"+params.row.id}>
-            <i className="fas fa-pen"/>
-
-            </Link>
-
-                <DeleteIcon className="BtnListDelete" onClick={()=>handleClickDelete(params.row.id)}/>        
-              </>
-            );
-          },
-        },
-      ];
+     }
+   
     
     return (
 
@@ -56,15 +36,33 @@ const Brands = () => {
                 <button className="BrandBtn"><BrandsModal/></button>
             </div>
             <div className="BrandTable">
-            <DataGrid
-        rows={data}
-        disableSelectionOnClick
-        columns={columns}
-        pageSize={5}
-        rowHeight={110}
-        autoHeight
+            <Table  bordered>
+  <thead>
+    <tr>
      
-         />
+      <th style={{width:200}}>Image</th>
+      <th>Brand</th>
+      <th>Brand(Ar)</th>
+      <th style={{width:200}}>Action</th>
+    </tr>
+  </thead>
+ 
+
+  
+  <tbody>
+     {
+     data.map((item)=>
+    <tr>
+      
+      <td className="image"><img src={"http://127.0.0.1:8000/"+item.file_path} alt="" /></td>
+      <td className="tabletext">{item.name}</td>
+      <td className="tabletext">{item.namear}</td>
+      <td className="tableicons"><i style={{color:'brown',cursor:"pointer"}} onClick={()=>deleteOperation(item.id)} class="icon fas fa-trash"/><i class="icon far fa-edit"/></td>
+    </tr>
+     )}
+  </tbody>
+ 
+</Table>
         </div>
         </div>
     )

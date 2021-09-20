@@ -5,7 +5,7 @@ import { Sidebar } from './style.js'
 
 function NavBar() {
     return (
-      <Navbar bg="dark" expand="lg"  variant="dark"  className="fixed-top">
+      <Navbar bg="dark" expand="lg"  variant="dark" id="head" className="fixed-top ">
       <Container>
         <Navbar.Brand as={Link} to="/">EVA</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -16,7 +16,7 @@ function NavBar() {
            
             <Sidebar> 
             <NavDropdown title="DashBoard" id="basic-nav-dropdown">
-              <NavDropdown.Item> New Shipment</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="./NewShipment">  New Shipment</NavDropdown.Item>
               <NavDropdown.Item >Parcels</NavDropdown.Item>
               <NavDropdown.Item >Orders</NavDropdown.Item>
               <NavDropdown.Item > Orders</NavDropdown.Item>
@@ -38,7 +38,7 @@ function NavBar() {
               Brands   
                 
                 </NavDropdown.Item>
-              <NavDropdown.Item  as={Link}  to="/Brands"> 
+              <NavDropdown.Item  as={Link}  to="/Catregories"> 
                 
               Catregories   
              
