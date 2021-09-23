@@ -1,0 +1,27 @@
+.Search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputSearch{
+    width: 70%;
+    border: none;
+    background: rgba(0, 0, 0, .03);
+    height: 40px;
+}
+.SearchBtn{
+    border: none;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .03);
+    font-weight: bold;
+    border-right: brown 1px solid;
+    padding: 0 5px;
+    color: brown;
+}
+.SearchBtn:Hover{
+   
+    color: white;
+    background-color: brown;
+    transition: .3s;
+   
+}

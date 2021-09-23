@@ -1,0 +1,40 @@
+.NewShipment{
+  
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+}
+
+ .newShipmentSelect{
+     width: 150px;
+     height: 50px;
+   margin: 0 10px;
+    
+ }
+ 
+.dropdowngroup{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 992px) {
+    .dropdowngroup {
+        display: flex;
+        flex-direction: column; 
+       margin: auto;
+     
+       
+    }
+    .BrandsbtnGroup {
+        display: flex;
+        flex-direction: column; 
+       margin-top: 5px ;
+       
+    }
+    .ShipmentDropdown{
+        margin: 5px 0; 
+    }
+  }
+
+

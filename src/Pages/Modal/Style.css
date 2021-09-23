@@ -1,0 +1,32 @@
+.ModelOpen{
+    margin: 0px  10px;
+    padding: 10px;
+    width: 200px;
+    background-color: brown;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.ModelClose{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: brown;
+    width: 200px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    height: 30px;
+    cursor: pointer;
+}
+.Modal{
+    max-height: 850px;
+    overflow: auto;
+   
+    scrollbar-color: inherit;
+
+}
